@@ -1,9 +1,11 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router/router'
 
 const App = () => {
   return (
-    <div className=' text-[44px] font-bold flex item-center justify-center h-screen'>
-     ProductBox Task
+    <div>
+      <RouterProvider router={router} />
     </div>
   )
 }
