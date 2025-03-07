@@ -67,16 +67,19 @@ const Shop = () => {
             <div>
               <div>
                <Link to={`/buyDetail/${item.id}`}>
-                        <button className="bg-white p-4 rounded-full mb-2">
-                          <FaEye size={50} />
+                        <button 
+                         style={{backgroundColor:"white", padding:"10px"}} 
+                    className="bg-white p-4 rounded-full mb-2">
+                          <FaEye size={20} />
                         </button>
                       </Link>
               </div>
-              <button 
+              <button
+                    style={{backgroundColor:"white", padding:"10px"}} 
                     onClick={() => handleDelete(item.id)} 
                     className="bg-white p-4 rounded-full"
                   >
-                    <FiTrash />
+                    <FiTrash size={20} />
                   </button>
             </div>
           </div>
