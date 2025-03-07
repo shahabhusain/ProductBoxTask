@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { navbar } from "../../../../miniture/src/data/Data";
+import { navbar } from "../data/Data";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { MdOutlineShoppingBag } from "react-icons/md";

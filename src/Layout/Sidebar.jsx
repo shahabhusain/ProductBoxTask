@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { FaTimes } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
-import { getCartTotal, removeItem } from "../../../../miniture/src/redux/cartSlice";
+import { getCartTotal, removeItem } from "../redux/cartSlice";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
