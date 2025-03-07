@@ -7,6 +7,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Modal from "../Layout/Modal";
 import Heading from "../Layout/Heading";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const FlashSale = () => {
   const [isModalOpen, setIsModalOpen] = useState(null);
@@ -18,7 +20,8 @@ const FlashSale = () => {
       setProductData(response.data);
       console.log("responseData =>", response.data);
     } catch (error) {
-      console.error("Error fetching products:", error);
+      toast.error("Please run the server for seeing the products", error);
+      
     }
   };
 
@@ -30,6 +33,7 @@ const FlashSale = () => {
     try {
       await axios.delete(`http://localhost:4000/items/${id}`);
       setProductData(productData.filter(item => item.id !== id));
+      toast.success("Product Delete SuccessFully")
     } catch (error) {
       console.error("Error deleting product:", error);
     }
@@ -39,6 +43,7 @@ const FlashSale = () => {
 
   return (
     <div>
+      <ToastContainer />
       <div>
       <Heading heading={"All Furniture Products"} />
         <div className="w-10/12 m-auto flex gap-3 items-start mt-8">

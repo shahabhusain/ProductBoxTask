@@ -21,7 +21,7 @@ const Shop = () => {
       setProductData(response.data);
       console.log("responseData =>", response.data);
     } catch (error) {
-      console.error("Error fetching products:", error);
+       toast.error("Please run the server for seeing the products", error);
     }
   };
 
@@ -68,7 +68,7 @@ const Shop = () => {
               <div>
                <Link to={`/buyDetail/${item.id}`}>
                         <button className="bg-white p-4 rounded-full mb-2">
-                          <FaEye />
+                          <FaEye size={50} />
                         </button>
                       </Link>
               </div>
